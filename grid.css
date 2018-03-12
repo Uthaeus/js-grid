@@ -1,0 +1,8 @@
+.container{
+  border : solid #000;
+  min-height:100%;
+}
+.box{
+  border : solid #000;
+}
+
