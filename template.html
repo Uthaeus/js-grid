@@ -82,3 +82,36 @@
     <script src="javascript/main.js" charset="utf-8"></script>
   </body>
 </html>
+
+<!-- ***************************************
+*************************************** -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+<body>
+    <div class='sidebar'>
+        <h1>Etch-a-sketch</h1>
+        <button id='clearButton'>Clear Grid</button>
+        <div id='rc'>
+            <input id='random-colors' type="checkbox">Random colors? 
+            <select id='grid-size'>
+                <option disabled selected value> -- select a grid size -- </option>
+                <option value='16'>16x16</option>
+                <option value='32'>32x32</option>
+                <option value='64'>64x64</option>
+            </select>
+        </div>
+    </div>
+    <div id='grid'>
+
+    </div>
+</body>
+<script src="main.js"></script>
+</html>
