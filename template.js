@@ -1,3 +1,26 @@
+function grid(){
+  var container = document.createElement("div");
+  container.id = "main";
+  container.className = "container";
+  document.body.appendChild(container);
+  var main = document.getElementById('main');
+  for (var i=0; i<16; i++) {
+      var row = document.createElement("div");
+      row.className = "row";
+      row.id = "row" + i;
+      main.appendChild(row);
+      var roww = document.getElementById('row'+i);
+      for (var j=0; j<16; j++) {
+          var box = document.createElement("div");
+          box.className = "box";
+          roww.appendChild(box);
+      }
+  }
+}
+window.onload = grid();
+//******************************
+//******************************
+
 const gridSize = document.getElementById('pixel-size-list');
 let gridX = gridSize.value;
 let gridY = gridSize.value;
@@ -5,7 +28,7 @@ let canvas = document.getElementById('canvas');
 
 // Create Grid
 function createGrid(x, y) {
-  for (let i = 1; i <= x * y; i++) {
+  for (let i = 1; i <= x*y; i++) {
     let div = document.createElement('div');
     div.className = 'grid-item';
     canvas.appendChild(div);
@@ -24,7 +47,7 @@ function clearGrid(elem) {
   let pixelSize = Number(elem.value);
   let gridItems = document.querySelectorAll('.grid-item');
   gridItems.forEach(gridItem => {
-    gridItem.remove();
+     gridItem.remove();
   });
 
   createGrid(pixelSize, pixelSize);
@@ -60,7 +83,7 @@ function resizeGrid(elem) {
 // Create Grid default on page load
 createGrid(gridX, gridY);
 
-// Event Listeners
+// Event listeners
 canvas.addEventListener('mousemove', printCanvas);
 document.getElementById('clear').addEventListener('click', () => {
   clearGrid(gridSize);
